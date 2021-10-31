@@ -3,20 +3,12 @@
   "version": "1.0.0",
   "description": "0.0.1",
   "main": "gulpfile.js",
-  "dependencies": {
-    "lisa-middleware": "git+https://github.com/seapunk/lisa-middleware.git"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.8.2",
-    "del": "^1.2.1",
-    "express": "^4.13.3",
-    "gulp": "^3.9.0",
-    "jade": "^1.11.0",
-    "livescript": "^1.4.0",
-    "nodemon": "^1.4.1"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-html": "jade --out static/ src/views/",
+    "build-js": "lsc -co static/s/js/ src/s/ls/",
+    "build-css": "sass src/s/scss/:static/s/css/",
+    "build-assets": "cp -r src/s/userscript/ static/s/userscript/ && cp -r src/s/img/ static/s/img/",
+    "build": "npm run build-html && npm run build-js && npm run build-css && npm run build-assets"
   },
   "repository": {
     "type": "git",
@@ -27,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/seapunk/pye/issues"
   },
-  "homepage": "https://github.com/seapunk/pye#readme"
+  "homepage": "https://github.com/seapunk/pye#readme",
+  "devDependencies": {
+    "jade": "^1.11.0",
+    "livescript": "^1.6.0",
+    "sass": "^1.43.4"
+  }
 }
