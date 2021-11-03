@@ -4,16 +4,16 @@
 
 ---
 
-This is the code that now powers [pye.sq10.net](http://pye.sq10.net).
+This is the code that originally powered [pye.sq10.net](http://pye.sq10.net) and now powers [pye.lindseybot.net](https://pye.lindseybot.net).
 
 ---
 
-install
+Install
 ---
 
 Run `npm run build` to compile this project to a static website. The files will then be accessible in the `static` folder.
 
-*todo*, open up an [issue](https://github.com/SEAPUNK/PYE/issues/new) if you are interested in installing PYE on your local server
+You can then update the API keys in the `pye.js` file under `/s/js/`.
 
 contributors
 ---
