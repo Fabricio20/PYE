@@ -1,6 +1,6 @@
 /*
     PYE! v2
-    rev.1
+    rev.2
 
     Created by Ivan <ivan@sq10.net>
     MIT license
@@ -16,10 +16,10 @@ patch-sc = ->
 
 class PYE
     # Google API client ID.
-    gapi-client-id: '889751255111-qjkp9cvcrn7m3rkv2kuhoia0flguvhbr.apps.googleusercontent.com'
+    gapi-client-id: '589352364432-6cgn304i2inu9svd3b7vc6oqapst0jqr.apps.googleusercontent.com'
 
     # Google API key.
-    gapi-api-key: 'AIzaSyA8d5uzO4wx3h1ZXcyVw-N2F9a-yhx8TtI'
+    gapi-api-key: 'AIzaSyANIzcazoTXVb2DEJs0aO0MN_YFLIJ_Xgk'
 
     # Google API scopes, in this case the managing of a Youtube account.
     gapi-scopes: 'https://www.googleapis.com/auth/youtube'
@@ -28,7 +28,7 @@ class PYE
     scapi-client-id: '279f0a297f0852bd0701b6437dd79317'
 
     # Soundcloud callback URI.
-    scapi-callback: 'http://pye.sq10.net/callback.html'
+    scapi-callback: 'https://pye.lindseybot.net/callback.html'
 
     init: ->
         $.event.props.push 'dataTransfer'
@@ -710,7 +710,7 @@ class PYE
                 response <~ SC.post '/playlists',
                     playlist:
                         title: "[PYE] #{name} by #{@raw-playlists.userid}"
-                        description: 'created with PYE (http://pye.sq10.net)'
+                        description: 'created with PYE (https://pye.lindseybot.net)'
                         tracks: tracks
                 if response.permalink_url?
                 and response.tracks?
